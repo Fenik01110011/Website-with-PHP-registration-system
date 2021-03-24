@@ -1,0 +1,20 @@
+### PROTECT FILES ###
+<FilesMatch "\.(htaccess|htpasswd|ini|fla|psd|log|sh)$">
+Order Allow,Deny
+Deny from all
+</FilesMatch>
+
+RewriteEngine On
+# RewriteCond %{HTTPS} off [OR]
+# RewriteCond %{HTTP_HOST} ^www\. [NC]
+# RewriteRule ^ https://phoenixweb.pl%{REQUEST_URI} [L,NE,R=301]
+RewriteRule aktualnosci index.php
+RewriteRule najnowsze-posty najnowsze.php
+RewriteRule kategorie kategorie.php
+RewriteRule regulamin regulamin.php
+RewriteRule dodaj-post dodaj.php
+RewriteRule konto konto.php
+RewriteRule rejestracja rejestracja.php
+RewriteRule zaloguj zaloguj.php
+RewriteRule wyloguj wyloguj.php
+RewriteRule post post.php
